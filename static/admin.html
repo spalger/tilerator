@@ -120,7 +120,7 @@
     // Allow user to change style via the ?s=xxx URL parameter
     // Uses "osm-intl" as the default style
     var match = location.search.match(/s=([^&\/]*)/);
-    var style = (match && match[1]) || 'osm-intl';
+    var style = (match && match[1]) || 'default';
     document.getElementById('style').value = style;
 
     var initZoom = 5;
@@ -147,7 +147,7 @@
     }
 
     function getTileUrl() {
-        return '/' + document.getElementById('style').value + '/{z}/{x}/{y}' + scalex + '.png';
+        return '/' + document.getElementById('style').value + '/{z}/{x}/{y}.png';
     }
 
     /**
@@ -193,7 +193,7 @@
 
     // Add a map layer
     var mapLayer = L.tileLayer(getTileUrl(), {
-        maxZoom: 18,
+        maxZoom: 12,
         attribution: 'Wikimedia maps beta | Map data &copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap contributors</a>',
         id: 'wikipedia-map-01'
     });
