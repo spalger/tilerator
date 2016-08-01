@@ -1,4 +1,4 @@
-vector:
+pbfgen:
   public: false
   formats: [pbf]
   uri: bridge://
@@ -16,7 +16,7 @@ vector:
       password: {var: osmdb-pass}
       dbname: {var: osmdb-dbname}
 
-cass:
+pbfstore:
   public: false
   formats: [pbf]
   uri: cassandra://
@@ -25,13 +25,13 @@ cass:
     cp: [localhost]
     createIfMissing: true
 
-getpbf:
+autogenpbf:
   public: false
   formats: [pbf]
   uri: autogen://
   params:
-    storage: {ref: cass}
-    generator: {ref: vector}
+    storage: {ref: pbfstore}
+    generator: {ref: pbfgen}
     mingen: 0
     maxgen: 12
     minstore: 0
@@ -40,9 +40,8 @@ getpbf:
 default:
   public: true
   formats: [png]
-  scales: []
   uri: vector://
   xml:
     loader: osm-bright-style
   xmlSetParams:
-    source: {ref: vector}
+    source: {ref: autogenpbf}
