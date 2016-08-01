@@ -48,6 +48,7 @@
     "bluebird": "^3.3.5",
     "body-parser": "^1.15.0",
     "bunyan": "^1.8.1",
+    "bunyan-prettystream": "*",
     "cassandra-uuid": "^0.0.2",
     "compression": "^1.6.1",
     "domino": "^1.0.24",
