@@ -22,7 +22,7 @@ pbfstore:
   uri: cassandra://
   params:
     keyspace: v1
-    cp: [localhost]
+    cp: [{var: cassandra-host }]
     createIfMissing: true
 
 autogenpbf:
