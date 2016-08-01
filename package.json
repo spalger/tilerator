@@ -80,8 +80,8 @@
     "kartotherian-postgres": "git+https://github.com/kartotherian/kartotherian-postgres.git",
     "kartotherian-substantial": "git+https://github.com/kartotherian/kartotherian-substantial.git",
     "tilerator-jobprocessor": "git+https://github.com/kartotherian/tilerator-jobprocessor.git",
-    "osm-bright-source": "git+https://github.com/kartotherian/osm-bright.tm2source.git",
-    "osm-bright-style": "git+https://github.com/kartotherian/osm-bright.tm2.git"
+    "osm-bright-source": "git+https://github.com/spalger/osm-bright.tm2source.git#estiles",
+    "osm-bright-style": "git+https://github.com/spalger/osm-bright.tm2.git#estiles"
   },
   "devDependencies": {
     "extend": "^3.0.0",
